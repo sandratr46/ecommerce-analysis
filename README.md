@@ -32,7 +32,65 @@ The dataset contains transactional-level data with the following key fields:
 **Source:** Kaggle – https://www.kaggle.com/datasets/shriyashjagtap/e-commerce-customer-for-behavior-analysis/data
 
 ---
+## 🧠 Approach & Methodology
 
+### Data Notes
+
+* Dataset is **synthetic (Kaggle)** and may not fully reflect real-world behavior
+* Customer names are duplicated and not suitable as unique identifiers
+* Original dataset lacked `Order_ID` and `Product_ID`
+* `Returns` column contained missing values
+
+---
+
+### Data Cleaning & Preparation
+
+Data preprocessing was performed using SQL prior to visualization in Power BI.
+
+1. **Handle Missing Values**
+
+   * Replaced blank `Returns` values with `0` (assumed no return)
+
+2. **Data Standardization**
+
+   * Standardized categorical values (e.g., gender, product categories)
+   * Validated numeric fields for consistency
+
+3. **Generate Unique Identifiers**
+
+   * Created synthetic `Customer_ID`, `Order_ID`, and `Product_ID`
+
+4. **Data Modeling**
+
+   * Designed a **star schema**:
+
+     * Fact table: Order
+     * Dimension tables: Customer, Product, Customer Segment
+<img width="897" height="433" alt="Screenshot 2026-04-27 at 18 44 26" src="https://github.com/user-attachments/assets/d4f1395d-d403-4b99-9c1a-ebf3de15eef0" />
+
+---
+
+### Customer Segmentation
+
+* Implemented using **PERCENT_RANK() in SQL**
+* Segments:
+
+  * Top 20% → High Value
+  * Next 30% → Medium Value
+  * Bottom 50% → Low Value
+<img width="897" height="442" alt="Screenshot 2026-04-27 at 18 45 10" src="https://github.com/user-attachments/assets/b5460428-2129-4a43-9350-5390113ce23d" />
+
+---
+
+### Key Metrics (DAX)
+
+* Total Revenue / Net Revenue
+* Return Rate
+* Revenue Lost from Returns
+* Churn Rate
+* Average Customer Value
+
+---
 ## 🔍 Data Discovery & Key Findings
 
 ### 1. Customer Insights
@@ -119,65 +177,6 @@ The dataset contains transactional-level data with the following key fields:
 
 ---
 
-## 🧠 Approach & Methodology
-
-### Data Notes
-
-* Dataset is **synthetic (Kaggle)** and may not fully reflect real-world behavior
-* Customer names are duplicated and not suitable as unique identifiers
-* Original dataset lacked `Order_ID` and `Product_ID`
-* `Returns` column contained missing values
-
----
-
-### Data Cleaning & Preparation
-
-Data preprocessing was performed using SQL prior to visualization in Power BI.
-
-1. **Handle Missing Values**
-
-   * Replaced blank `Returns` values with `0` (assumed no return)
-
-2. **Data Standardization**
-
-   * Standardized categorical values (e.g., gender, product categories)
-   * Validated numeric fields for consistency
-
-3. **Generate Unique Identifiers**
-
-   * Created synthetic `Customer_ID`, `Order_ID`, and `Product_ID`
-
-4. **Data Modeling**
-
-   * Designed a **star schema**:
-
-     * Fact table: Order
-     * Dimension tables: Customer, Product, Customer Segment
-<img width="897" height="433" alt="Screenshot 2026-04-27 at 18 44 26" src="https://github.com/user-attachments/assets/d4f1395d-d403-4b99-9c1a-ebf3de15eef0" />
-
----
-
-### Customer Segmentation
-
-* Implemented using **PERCENT_RANK() in SQL**
-* Segments:
-
-  * Top 20% → High Value
-  * Next 30% → Medium Value
-  * Bottom 50% → Low Value
-<img width="897" height="442" alt="Screenshot 2026-04-27 at 18 45 10" src="https://github.com/user-attachments/assets/b5460428-2129-4a43-9350-5390113ce23d" />
-
----
-
-### Key Metrics (DAX)
-
-* Total Revenue / Net Revenue
-* Return Rate
-* Revenue Lost from Returns
-* Churn Rate
-* Average Customer Value
-
----
 
 ## 📈 Business Recommendations
 
