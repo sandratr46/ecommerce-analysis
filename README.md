@@ -48,9 +48,9 @@ The dataset contains transactional-level data with the following key fields:
 Data preprocessing was performed using SQL prior to visualization in Power BI.
 
 1. **Handle Missing Values**
-  * The Returns column contains missing (blank) values.
-  * Since this field represents a binary indicator (1 = returned, 0 = not returned), all blank values were assumed to indicate that the order was not returned.
-  * Missing values were therefore replaced with 0 to ensure consistency in analysis.
+    * The Returns column contains missing (blank) values.
+    * Since this field represents a binary indicator (1 = returned, 0 = not returned), all blank values were assumed to indicate that the order was not returned.
+    * Missing values were therefore replaced with 0 to ensure consistency in analysis.
 
 
 2. **Data Standardization**
