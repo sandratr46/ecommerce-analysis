@@ -155,7 +155,7 @@ Data preprocessing was performed using SQL prior to visualization in Power BI.
 
 ---
 
-## 📊 Dashboard Features
+## Dashboard Features
 
 ### Customer Page
 
