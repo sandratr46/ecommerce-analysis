@@ -48,8 +48,10 @@ The dataset contains transactional-level data with the following key fields:
 Data preprocessing was performed using SQL prior to visualization in Power BI.
 
 1. **Handle Missing Values**
+  * The Returns column contains missing (blank) values.
+  * Since this field represents a binary indicator (1 = returned, 0 = not returned), all blank values were assumed to indicate that the order was not returned.
+  * Missing values were therefore replaced with 0 to ensure consistency in analysis.
 
-   * Replaced blank `Returns` values with `0` (assumed no return)
 
 2. **Data Standardization**
 
@@ -58,7 +60,9 @@ Data preprocessing was performed using SQL prior to visualization in Power BI.
 
 3. **Generate Unique Identifiers**
 
-   * Created synthetic `Customer_ID`, `Order_ID`, and `Product_ID`
+   * Created synthetic `Order_ID`, and `Product_ID` using SQL
+     
+<img width="930" height="457" alt="Screenshot 2026-04-27 at 22 26 02" src="https://github.com/user-attachments/assets/35db597f-2c9a-4c6b-9299-093e26d2e820" />
 
 4. **Data Modeling**
 
