@@ -1,13 +1,13 @@
-# 🛍️ E-commerce Customer & Product Analytics Dashboard
+# E-commerce Customer & Product Analytics Dashboard
 
-## 📌 Project Overview
+## Project Overview
 
 This project analyzes customer behavior, product performance, and return impact using transactional e-commerce data.
 The objective is to identify key drivers of revenue, customer value, and financial loss caused by product returns and customer churn.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 * Understand customer segmentation and value distribution
 * Analyze churn behavior and identify at-risk customers
@@ -16,7 +16,7 @@ The objective is to identify key drivers of revenue, customer value, and financi
 
 ---
 
-## 📂 Dataset Description
+## Dataset Description
 
 The dataset contains transactional-level data with the following key fields:
 
@@ -32,7 +32,7 @@ The dataset contains transactional-level data with the following key fields:
 **Source:** Kaggle – https://www.kaggle.com/datasets/shriyashjagtap/e-commerce-customer-for-behavior-analysis/data
 
 ---
-## 🧠 Approach & Methodology
+## Approach & Methodology
 
 ### Data Notes
 
@@ -103,7 +103,7 @@ Data preprocessing was performed using SQL prior to visualization in Power BI.
 * Despite their smaller size, **high-value customers contribute a disproportionate share of total revenue**
 * Customer demographics (age and gender) are relatively balanced
 
-👉 **Insight:** Revenue is highly concentrated among a small group of high-value customers, making retention and targeted engagement critical.
+**Insight:** Revenue is highly concentrated among a small group of high-value customers, making retention and targeted engagement critical.
 
 ---
 
@@ -113,7 +113,7 @@ Data preprocessing was performed using SQL prior to visualization in Power BI.
 * Low-value customers contribute the **highest number of churned customers** due to their larger population
 * **High-value customers exhibit a slightly higher churn rate**, indicating greater risk per individual
 
-👉 **Insight:** Although churn volume is driven by low-value customers, high-value customers represent a higher relative risk. Losing even a small portion of this segment can significantly impact revenue.
+**Insight:** Although churn volume is driven by low-value customers, high-value customers represent a higher relative risk. Losing even a small portion of this segment can significantly impact revenue.
 
 ---
 
@@ -122,7 +122,7 @@ Data preprocessing was performed using SQL prior to visualization in Power BI.
 * Revenue contribution is **evenly distributed across all product categories**
 * Sales volume (quantity sold) remains consistent across categories
 
-👉 **Insight:** The business operates on a diversified product base, reducing dependency on any single category but limiting standout performance drivers.
+**Insight:** The business operates on a diversified product base, reducing dependency on any single category but limiting standout performance drivers.
 
 ---
 
@@ -132,7 +132,7 @@ Data preprocessing was performed using SQL prior to visualization in Power BI.
 * Revenue lost due to returns is substantial (~277M), significantly reducing overall profitability
 * Net revenue (~405M) is heavily impacted by return-related losses
 
-👉 **Insight:** Returns represent a major operational inefficiency affecting the entire business, rather than a category-specific issue.
+**Insight:** Returns represent a major operational inefficiency affecting the entire business, rather than a category-specific issue.
 
 ---
 
@@ -141,7 +141,7 @@ Data preprocessing was performed using SQL prior to visualization in Power BI.
 * Categories generating higher revenue also incur **proportionally higher return losses**
 * High sales volume does not necessarily translate into better performance due to the **offsetting impact of returns**
 
-👉 **Insight:** Strong sales performance is undermined by high return rates, indicating that improving return management could significantly enhance profitability.
+**Insight:** Strong sales performance is undermined by high return rates, indicating that improving return management could significantly enhance profitability.
 
 ---
 
@@ -151,7 +151,7 @@ Data preprocessing was performed using SQL prior to visualization in Power BI.
 * A noticeable **decline in revenue occurs toward the end of the year**, despite relatively stable order volume
 * Return rates remain consistently high across all months (~40%)
 
-👉 **Insight:** The late-year revenue decline is not driven solely by demand, suggesting potential external factors such as seasonality or shifts in customer behavior.
+**Insight:** The late-year revenue decline is not driven solely by demand, suggesting potential external factors such as seasonality or shifts in customer behavior.
 
 ---
 
@@ -182,7 +182,7 @@ Data preprocessing was performed using SQL prior to visualization in Power BI.
 ---
 
 
-## 📈 Business Recommendations
+## Business Recommendations
 
 * Investigate root causes of high return rates (e.g., product quality or expectation mismatch)
 * Improve retention strategies for high-value customers.
@@ -191,7 +191,7 @@ Data preprocessing was performed using SQL prior to visualization in Power BI.
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 * Implement RFM segmentation
 * Add predictive churn modeling
@@ -200,7 +200,7 @@ Data preprocessing was performed using SQL prior to visualization in Power BI.
 
 ---
 
-## 📎 Author
+## Author
 
 Sandra Trinh
 
